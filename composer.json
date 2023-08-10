@@ -1,7 +1,7 @@
 {
   "require": {
+    "php": "^8.2",
     "ext-json": "*",
-    "php": "8.2",
     "yiisoft/yii2": "^2.0",
     "vlucas/phpdotenv": "^5.5"
   },

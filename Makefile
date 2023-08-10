@@ -5,10 +5,10 @@ composer_upgrade:
 	docker-compose exec php composer upgrade -W --no-progress
 
 yarn_install:
-	docker-compose run --rm node yarn install --no-progress
+	docker-compose run --rm node yarn install
 
 yarn_upgrade:
-	docker-compose run --rm node yarn upgrade --no-progress
+	docker-compose run --rm node yarn upgrade
 
 upgrade: composer_upgrade yarn_upgrade
 

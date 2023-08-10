@@ -2,6 +2,7 @@
 /.idea/
 /vendor/
 /.angular/
+/node_modules/
 /web/main.*.js
 /web/polyfills.*.js
 /web/runtime.*.js
