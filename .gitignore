@@ -2,3 +2,11 @@
 /.idea/
 /vendor/
 /.angular/
+/web/main.*.js
+/web/polyfills.*.js
+/web/runtime.*.js
+/web/scripts.*.js
+/web/styles.*.css
+/web/index.html
+/web/favicon.ico
+/web/3rdpartylicenses.txt
