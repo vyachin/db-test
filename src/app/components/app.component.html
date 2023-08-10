@@ -1,0 +1,41 @@
+<div class="container">
+
+    <p *ngIf="loading">Загрузка ...</p>
+
+    <div *ngIf="!loading">
+        <div class="row my-2">
+            <div class="col-2 offset-10">
+                <label for="per-page">Выводить по</label>
+                <select (change)="onChangePerPage($event)" [(ngModel)]="perPage" class="form-control" id="per-page">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+            <tr>
+                <td>id</td>
+                <td>Наименование</td>
+                <td>Цена</td>
+                <td>Количество</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let row of dataList ">
+                <td>{{ row.id }}</td>
+                <td>{{ row.title }}</td>
+                <td>{{ row.price }}</td>
+                <td>{{ row.quantity }}</td>
+            </tr>
+            </tbody>
+        </table>
+        <div aria-label="Pagination" class="btn-group" role="group">
+            <button (click)="prevPage()" [disabled]="page <= 1" class="btn btn-outline-primary" type="button">Назад
+            </button>
+            <button (click)="nextPage()" [disabled]="page >= pageCount" class="btn btn-outline-primary" type="button">
+                Вперед
+            </button>
+        </div>
+    </div>
+</div>
